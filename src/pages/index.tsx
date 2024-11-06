@@ -14,7 +14,10 @@ function HomepageHeader() {
         <div className="avatar avatar--vertical">
           <img
             className="avatar__photo avatar__photo--xl"
-            src="https://avatars1.githubusercontent.com/u/977348?s=460&v=4"
+            src={useBaseUrl("/img/me.jpg")}
+            style={{
+              objectFit: "cover",
+            }}
           />
         </div>
         <div
