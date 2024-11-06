@@ -66,7 +66,12 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: "img/docusaurus-social-card.jpg",
+    image: "img/coding.png",
+    colorMode: {
+      defaultMode: "dark", // Set the default to 'light' mode
+      disableSwitch: true, // Disable the toggle/switch
+      respectPrefersColorScheme: false, // Ignore user’s OS setting
+    },
     navbar: {
       title: "Zak",
       logo: {
@@ -84,7 +89,7 @@ const config: Config = {
         { to: "/certificates", label: "Certificates", position: "left" },
         { to: "/blog", label: "Blog", position: "left" },
         {
-          href: "https://github.com/facebook/docusaurus",
+          href: "https://github.com/HeinHtetNyi/porfolio",
           label: "GitHub",
           position: "right",
         },
@@ -133,7 +138,7 @@ const config: Config = {
       //     ],
       //   },
       // ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `I eat data instead of snacks!`,
     },
     prism: {
       theme: prismThemes.github,

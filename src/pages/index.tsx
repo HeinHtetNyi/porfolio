@@ -6,10 +6,10 @@ import styles from "./index.module.css";
 import Marquee from "react-fast-marquee";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 
-function HomepageHeader() {
+function NameCard() {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <div className={clsx("hero hero--secondary", styles.heroBanner)}>
+    <div className={clsx("hero hero--secondary", styles.nameCard)}>
       <div className="container">
         <div className="avatar avatar--vertical">
           <img
@@ -28,19 +28,25 @@ function HomepageHeader() {
             gap: 10,
           }}
         >
-          <Heading as="h1" className="hero__title" style={{ marginBottom: 0 }}>
+          <Heading
+            as="h1"
+            className="hero__title secondary-text-color"
+            style={{ marginBottom: 0 }}
+          >
             Hein Zak
           </Heading>
           <img src={useBaseUrl("/img/myanmar.png")} width={40} />
         </div>
-        <p className="hero__subtitle">Data Engineer at AYAPay</p>
+        <p className="hero__subtitle secondary-text-color">
+          Data Engineer at <b>AYAPay</b>
+        </p>
         <div className={styles.buttons}>
           <Link
             className="button button--lg"
             to="/about-me"
             style={{
-              backgroundColor: "#EEEEEE",
-              color: "#222831",
+              backgroundColor: "#31363F",
+              color: "#EEEEEE",
             }}
           >
             Learn me!
@@ -54,7 +60,7 @@ function HomepageHeader() {
 function SkillMarquee() {
   return (
     <div style={{ marginTop: "100px" }}>
-      <Marquee autoFill={true} delay={1} speed={100}>
+      <Marquee autoFill={true} delay={1} speed={100} pauseOnHover={true}>
         <img
           src={useBaseUrl("/skills/python.png")}
           width={80}
@@ -99,7 +105,7 @@ export default function Home(): JSX.Element {
         height: "100vh",
       }}
     >
-      <HomepageHeader />
+      <NameCard />
       <SkillMarquee />
     </main>
   );
