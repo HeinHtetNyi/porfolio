@@ -32,13 +32,21 @@ function NameCard() {
           <Heading
             as="h1"
             className="hero__title secondary-text-color"
-            style={{ marginBottom: 0 }}
+            style={{
+              marginBottom: 0,
+              fontSize: "clamp(1.5rem, 4vw + 1rem, 3rem)",
+            }}
           >
             Hein Zak
           </Heading>
           <img src={useBaseUrl("/img/myanmar.png")} width={40} />
         </div>
-        <p className="hero__subtitle secondary-text-color">
+        <p
+          className="hero__subtitle secondary-text-color"
+          style={{
+            fontSize: "clamp(1rem, 2vw + 0.5rem, 1.5rem)",
+          }}
+        >
           Data Engineer at <b>AYAPay</b>
         </p>
         <div className={styles.buttons}>
@@ -60,7 +68,7 @@ function NameCard() {
 
 function SkillMarquee() {
   return (
-    <div style={{ marginTop: "100px" }}>
+    <div style={{ marginTop: "50px" }}>
       <Marquee autoFill={true} delay={1} speed={100} pauseOnHover={true}>
         <img
           src={useBaseUrl("/skills/python.png")}
@@ -104,13 +112,15 @@ export default function Home(): JSX.Element {
         backgroundColor: "#222831",
         width: "100%",
         height: "100vh",
+        padding: "0 20px",
       }}
     >
       <NameCard />
       <div style={{ textAlign: "center" }}>
         <TypeAnimation
           sequence={[
-            "Everything I do is for Saw Yu ❤️", // Types 'One'
+            "Everything I do is for Saw Yu ❤️",
+            1000,
             () => {
               console.log("Sequence completed");
             },
@@ -119,7 +129,7 @@ export default function Home(): JSX.Element {
           cursor={false}
           repeat={Infinity}
           style={{
-            fontSize: "2em",
+            fontSize: "clamp(1rem, 2vw + 1rem, 2rem)",
           }}
         />
       </div>
