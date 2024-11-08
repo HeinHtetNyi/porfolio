@@ -5,6 +5,7 @@ import Heading from "@theme/Heading";
 import styles from "./index.module.css";
 import Marquee from "react-fast-marquee";
 import useBaseUrl from "@docusaurus/useBaseUrl";
+import { TypeAnimation } from "react-type-animation";
 
 function NameCard() {
   const { siteConfig } = useDocusaurusContext();
@@ -106,6 +107,22 @@ export default function Home(): JSX.Element {
       }}
     >
       <NameCard />
+      <div style={{ textAlign: "center" }}>
+        <TypeAnimation
+          sequence={[
+            "Everything I do is for Saw Yu ❤️", // Types 'One'
+            () => {
+              console.log("Sequence completed");
+            },
+          ]}
+          wrapper="span"
+          cursor={false}
+          repeat={Infinity}
+          style={{
+            fontSize: "2em",
+          }}
+        />
+      </div>
       <SkillMarquee />
     </main>
   );
