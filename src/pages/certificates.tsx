@@ -1,26 +1,14 @@
 import Layout from "@theme/Layout";
-import CertificateCard from "../components/CertificateCard";
+import AWSCertificates from "../components/AWSCertificates";
+import DataCampCertificates from "../components/DataCampCertificates";
+import HackerRankCertificates from "../components/HackerRankCertificates";
 
 export default function Certificates() {
   return (
     <Layout>
-      <main
-        style={{
-          padding: "10px 20px",
-          display: "flex",
-          // justifyContent: "space-around",
-          gap: 20,
-          flexWrap: "wrap",
-        }}
-      >
-        <CertificateCard />
-        <CertificateCard />
-        <CertificateCard />
-        <CertificateCard />
-        <CertificateCard />
-        <CertificateCard />
-        <CertificateCard />
-      </main>
+      <AWSCertificates />
+      <DataCampCertificates />
+      <HackerRankCertificates />
     </Layout>
   );
 }

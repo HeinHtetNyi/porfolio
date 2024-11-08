@@ -138,7 +138,7 @@ const config: Config = {
       //     ],
       //   },
       // ],
-      copyright: `I eat data instead of snacks!`,
+      copyright: `Data is Protein. I eat data instead of snacks!`,
     },
     prism: {
       theme: prismThemes.github,
