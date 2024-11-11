@@ -49,28 +49,11 @@ export default function DataCampCertificates() {
         className={styles.swiper}
       >
         <SwiperSlide className={styles.swiperSlide}>
-          <CertificateCard />
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}>
-          <CertificateCard />
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}>
-          <CertificateCard />
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}>
-          <CertificateCard />
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}>
-          <CertificateCard />
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}>
-          <CertificateCard />
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}>
-          <CertificateCard />
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}>
-          <CertificateCard />
+          <CertificateCard
+            imageUrl={"certificates/de_associate.png"}
+            title="Data Engineer Associate"
+            link="https://www.datacamp.com/certificate/DEA0018324454440"
+          />
         </SwiperSlide>
       </Swiper>
     </div>

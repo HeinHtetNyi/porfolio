@@ -49,28 +49,32 @@ export default function HackerRankCertificates() {
         className={styles.swiper}
       >
         <SwiperSlide className={styles.swiperSlide}>
-          <CertificateCard />
+          <CertificateCard
+            imageUrl={"certificates/python_basic.png"}
+            title="Python Basic"
+            link="https://www.hackerrank.com/certificates/iframe/171c175e6412"
+          />
         </SwiperSlide>
         <SwiperSlide className={styles.swiperSlide}>
-          <CertificateCard />
+          <CertificateCard
+            imageUrl={"certificates/sql_basic.png"}
+            title="SQL Basic"
+            link="https://www.hackerrank.com/certificates/iframe/c1c4196745ed"
+          />
         </SwiperSlide>
         <SwiperSlide className={styles.swiperSlide}>
-          <CertificateCard />
+          <CertificateCard
+            imageUrl={"certificates/sql_intermediate.png"}
+            title="SQL Intermediate"
+            link="https://www.hackerrank.com/certificates/iframe/69b7c2f54499"
+          />
         </SwiperSlide>
         <SwiperSlide className={styles.swiperSlide}>
-          <CertificateCard />
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}>
-          <CertificateCard />
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}>
-          <CertificateCard />
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}>
-          <CertificateCard />
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}>
-          <CertificateCard />
+          <CertificateCard
+            imageUrl={"certificates/sql_advanced.png"}
+            title="SQL Advanced"
+            link="https://www.hackerrank.com/certificates/iframe/827d2ac6148c"
+          />
         </SwiperSlide>
       </Swiper>
     </div>

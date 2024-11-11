@@ -49,28 +49,16 @@ export default function AWSCertificates() {
         className={styles.swiper}
       >
         <SwiperSlide className={styles.swiperSlide}>
-          <CertificateCard />
+          <CertificateCard
+            imageUrl={"certificates/aws_cloud_practitioner_essential.png"}
+            title="AWS Cloud Practitioner Essential"
+          />
         </SwiperSlide>
         <SwiperSlide className={styles.swiperSlide}>
-          <CertificateCard />
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}>
-          <CertificateCard />
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}>
-          <CertificateCard />
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}>
-          <CertificateCard />
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}>
-          <CertificateCard />
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}>
-          <CertificateCard />
-        </SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}>
-          <CertificateCard />
+          <CertificateCard
+            imageUrl={"certificates/aws_job_roles.png"}
+            title="AWS Job Roles"
+          />
         </SwiperSlide>
       </Swiper>
     </div>
