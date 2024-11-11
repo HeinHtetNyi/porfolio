@@ -2,6 +2,8 @@ import { TypeAnimation } from "react-type-animation";
 import NameCard from "../components/NameCard";
 import SkillMarquee from "../components/SkillMarquee";
 import HomeFooter from "../components/HomeFooter";
+import SocialIcons from "../components/SocialIcons";
+import LiveClock from "../components/LiveClocks";
 
 export default function Home(): JSX.Element {
   return (
@@ -13,6 +15,16 @@ export default function Home(): JSX.Element {
         padding: "20px 20px",
       }}
     >
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          flexWrap: "wrap",
+        }}
+      >
+        <LiveClock />
+        <SocialIcons />
+      </div>
       <NameCard />
       <div style={{ textAlign: "center" }}>
         <TypeAnimation
