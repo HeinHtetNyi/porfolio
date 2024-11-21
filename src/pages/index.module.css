@@ -2,3 +2,26 @@
  * CSS files with the .module.css suffix will be treated as CSS modules
  * and scoped locally.
  */
+.responsiveGrid {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 2rem;
+    align-items: start;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    /* Tablet and smaller */
+    .responsiveGrid {
+        grid-template-columns: 100%; /* Full width for each item */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Mobile */
+    .responsiveGrid {
+        grid-template-columns: 100%; /* Full width for each item */
+        gap: 1rem; /* Optional: Adjust gap for smaller screens */
+    }
+}

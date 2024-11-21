@@ -6,53 +6,44 @@ import styles from "./namecard.module.css";
 
 export default function NameCard() {
   return (
-    <div className={clsx("hero hero--secondary", styles.nameCard)}>
-      <div className="container">
-        <div className="avatar avatar--vertical">
-          <img
-            className="avatar__photo avatar__photo--xl"
-            src={useBaseUrl("/img/me.jpg")}
-            style={{
-              objectFit: "cover",
-            }}
-          />
+    <div className={styles.container}>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          flexWrap: "wrap",
+        }}
+      >
+        <div style={{ width: "70%" }}>
+          <ul className="tabs">
+            <li className="tabs__item tabs__item--active">
+              <img src={useBaseUrl("/home/man.png")} width={40} />
+            </li>
+            <li className="tabs__item">
+              <img src={useBaseUrl("/home/girl.png")} width={40} />
+            </li>
+            <li className="tabs__item">
+              <img src={useBaseUrl("/home/skills.png")} width={40} />
+            </li>
+          </ul>
+          <p className={styles.title}>This is Me</p>
         </div>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            gap: 10,
-          }}
-        >
-          <Heading
-            as="h1"
-            className="hero__title secondary-text-color"
-            style={{
-              marginBottom: 0,
-              fontSize: "clamp(1.5rem, 4vw + 1rem, 3rem)",
-            }}
-          >
-            Hein Zak
-          </Heading>
-          <img src={useBaseUrl("/img/myanmar.png")} width={40} />
-        </div>
-        <p
-          className="hero__subtitle secondary-text-color"
-          style={{
-            fontSize: "clamp(1rem, 2vw + 0.5rem, 1.5rem)",
-          }}
-        >
-          Data Engineer at <b>AYAPay</b>
+        <img className={styles.avatar} src={useBaseUrl("/img/me.jpg")} />
+      </div>
+      <div className={styles.textBox}>
+        <p className={styles.text}>
+          My name is Hein Zak, and I am driven by a passion for data and a
+          commitment to lifelong learning. I am currently working as a data
+          engineer, focusing on the critical aspects of data management,
+          transformation, and analysis. While I’m deeply involved in the data
+          engineering field, my ultimate goal is to become a data scientist and
+          data expert. In preparation for my future studies in Taiwan, I am
+          actively learning traditional Chinese and English. Outside of my
+          professional pursuits, I enjoy playing basketball, which keeps me
+          active and grounded. I am excited to bring my enthusiasm for data and
+          dedication to learning into every opportunity that comes my way.
         </p>
-        <div className={styles.buttons}>
-          <Link
-            className={clsx("button button--lg", styles.learnMeButton)}
-            to="/about-me"
-          >
-            Learn me!
-          </Link>
-        </div>
       </div>
     </div>
   );

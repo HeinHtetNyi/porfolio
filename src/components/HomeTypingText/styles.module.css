@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Bokor&family=Doto:wght@100..900&display=swap");
+
+.text {
+    font-family: "Doto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings: "ROND" 0;
+    font-size: clamp(1rem, 2vw + 1rem, 2rem);
+}

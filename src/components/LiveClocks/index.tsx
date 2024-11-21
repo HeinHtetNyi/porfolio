@@ -1,4 +1,5 @@
 import Clock from "react-live-clock";
+import styles from "./styles.module.css";
 
 export default function LiveClock() {
   return (
@@ -17,7 +18,7 @@ export default function LiveClock() {
       >
         <h4>Rangoon: </h4>
         <h3>
-          <span className="badge badge--secondary">
+          <span className={styles.clock}>
             <Clock
               format="HH:mm:ss"
               interval={1000}
@@ -36,7 +37,7 @@ export default function LiveClock() {
       >
         <h4>Taipei: </h4>
         <h3>
-          <span className="badge badge--secondary">
+          <span className={styles.clock}>
             <Clock
               format="HH:mm:ss"
               interval={1000}

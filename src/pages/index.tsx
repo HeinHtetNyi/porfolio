@@ -1,9 +1,10 @@
-import { TypeAnimation } from "react-type-animation";
 import NameCard from "../components/NameCard";
-import SkillMarquee from "../components/SkillMarquee";
 import HomeFooter from "../components/HomeFooter";
 import SocialIcons from "../components/SocialIcons";
 import LiveClock from "../components/LiveClocks";
+import HomeTypingText from "../components/HomeTypingText";
+import InfoCard from "../components/InfoCard";
+import styles from "./index.module.css";
 
 export default function Home(): JSX.Element {
   return (
@@ -25,26 +26,17 @@ export default function Home(): JSX.Element {
         <LiveClock />
         <SocialIcons />
       </div>
-      <NameCard />
-      <div style={{ textAlign: "center" }}>
-        <TypeAnimation
-          sequence={[
-            "Everything I do is for Saw Yu ❤️",
-            1000,
-            () => {
-              console.log("Sequence completed");
-            },
-          ]}
-          wrapper="span"
-          cursor={false}
-          repeat={Infinity}
-          style={{
-            fontSize: "clamp(1rem, 2vw + 1rem, 2rem)",
-          }}
-        />
+      <HomeTypingText />
+      <div className={styles.responsiveGrid}>
+        <div style={{ marginLeft: "auto" }}>
+          <InfoCard />
+        </div>
+        <div>
+          <NameCard />
+        </div>
       </div>
-      <SkillMarquee />
-      <HomeFooter />
+      {/* <SkillMarquee /> */}
+      {/* <HomeFooter /> */}
     </main>
   );
 }
