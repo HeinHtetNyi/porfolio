@@ -42,9 +42,9 @@ export default function NameCard() {
           </Col>
           <Col lg={8} md={12} xs={12} sm={12} style={{ textAlign: "right" }}>
             {currentTab === 1 ? (
-              <img className={styles.avatar} src={useBaseUrl("/img/me.jpg")} />
+              <img className={styles.avatar} src={useBaseUrl("/img/me2.jpg")} />
             ) : (
-              <img className={styles.avatar} src={useBaseUrl("/img/sy3.jpg")} />
+              <img className={styles.avatar} src={useBaseUrl("/img/sy4.jpg")} />
             )}
           </Col>
         </Row>
