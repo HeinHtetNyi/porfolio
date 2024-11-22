@@ -1,7 +1,8 @@
 import useBaseUrl from "@docusaurus/useBaseUrl";
-import styles from "./namecard.module.css";
+import { Grid, Row, Col } from "rsuite";
 import { Highlight } from "rsuite";
 import { useState } from "react";
+import styles from "./namecard.module.css";
 
 export default function NameCard() {
   const [currentTab, setCurrentTab] = useState(1);
@@ -20,35 +21,34 @@ export default function NameCard() {
 
   return (
     <div className={styles.container}>
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          flexWrap: "wrap",
-        }}
-      >
-        <div style={{ width: "70%" }}>
-          <ul className="tabs">
-            <li className={activeTab(1)} onClick={() => handleClickTab(1)}>
-              <img src={useBaseUrl("/home/man.png")} width={40} />
-            </li>
-            <li className={activeTab(2)} onClick={() => handleClickTab(2)}>
-              <img src={useBaseUrl("/home/girl.png")} width={40} />
-            </li>
-          </ul>
-          {currentTab === 1 ? (
-            <p className={styles.title}>This is Me</p>
-          ) : (
-            <p className={styles.title}>This is Mine</p>
-          )}
-        </div>
-        {currentTab === 1 ? (
-          <img className={styles.avatar} src={useBaseUrl("/img/me.jpg")} />
-        ) : (
-          <img className={styles.avatar} src={useBaseUrl("/img/sy3.jpg")} />
-        )}
-      </div>
+      <Grid style={{ maxWidth: "600px" }}>
+        <Row>
+          <Col lg={16} md={12} xs={12} sm={12}>
+            <div>
+              <ul className="tabs">
+                <li className={activeTab(1)} onClick={() => handleClickTab(1)}>
+                  <img src={useBaseUrl("/home/man.png")} width={40} />
+                </li>
+                <li className={activeTab(2)} onClick={() => handleClickTab(2)}>
+                  <img src={useBaseUrl("/home/girl.png")} width={40} />
+                </li>
+              </ul>
+              {currentTab === 1 ? (
+                <p className={styles.title}>This is Me</p>
+              ) : (
+                <p className={styles.title}>This is Mine</p>
+              )}
+            </div>
+          </Col>
+          <Col lg={8} md={12} xs={12} sm={12} style={{ textAlign: "right" }}>
+            {currentTab === 1 ? (
+              <img className={styles.avatar} src={useBaseUrl("/img/me.jpg")} />
+            ) : (
+              <img className={styles.avatar} src={useBaseUrl("/img/sy3.jpg")} />
+            )}
+          </Col>
+        </Row>
+      </Grid>
       <div className={styles.textBox}>
         {currentTab === 1 ? (
           <p className={styles.text}>

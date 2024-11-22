@@ -19,6 +19,7 @@ export default function WorkExperience() {
           display: "flex",
           justifyContent: "space-between",
           marginBottom: "20px",
+          flexWrap: "wrap",
         }}
       >
         <Text

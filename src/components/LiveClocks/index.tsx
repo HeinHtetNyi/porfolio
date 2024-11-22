@@ -16,7 +16,7 @@ export default function LiveClock() {
           alignItems: "center",
         }}
       >
-        <h4>Rangoon: </h4>
+        {/* <h4>Rangoon: </h4>
         <h3>
           <span className={styles.clock}>
             <Clock
@@ -26,7 +26,7 @@ export default function LiveClock() {
               timezone="Asia/Rangoon"
             />
           </span>
-        </h3>
+        </h3> */}
       </div>
       <div
         style={{
