@@ -1,12 +1,19 @@
-.table {
-    border-width: 1;
-    border-color: white;
+.container {
+    margin: 20px auto;
+    /* margin-top: 20px; */
+    width: 310px;
+}
+
+.infoTable {
     border-radius: 20px;
-    border-collapse: collapse;
-    border-spacing: 0;
-    border: 1px solid;
-    border-radius: 20px;
-    overflow: hidden;
+    border: 1px solid snow;
+    /* width: 310px; */
+    margin: 0;
+}
+
+table td,
+tr {
+    border: none !important;
 }
 
 .firstRow {

@@ -1,14 +1,15 @@
 import clsx from "clsx";
 import Link from "@docusaurus/Link";
-import styles from "./styles.module.css";
 import SkillMarquee from "../SkillMarquee";
+import { Table } from "rsuite";
+import styles from "./styles.module.css";
 
 export default function InfoCard() {
   return (
-    <div>
-      <table className={styles.table}>
+    <div className={styles.container}>
+      <table className={styles.infoTable}>
         <tbody>
-          <tr className={styles.row}>
+          <tr>
             <td colSpan={2} className={styles.firstRow}>
               <span>Hein Htet Nyi</span>
             </td>
@@ -46,7 +47,7 @@ export default function InfoCard() {
             <td colSpan={2}>
               <Link
                 className={clsx("button button--lg", styles.learnMeButton)}
-                to="/about-me"
+                to="/certificates"
               >
                 Learn me!
               </Link>

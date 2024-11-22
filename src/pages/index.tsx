@@ -1,9 +1,11 @@
+import { Grid, Row, Col } from "rsuite";
 import NameCard from "../components/NameCard";
-import HomeFooter from "../components/HomeFooter";
 import SocialIcons from "../components/SocialIcons";
 import LiveClock from "../components/LiveClocks";
-import HomeTypingText from "../components/HomeTypingText";
 import InfoCard from "../components/InfoCard";
+import SkillScale from "../components/SkillScale";
+import WorkExperience from "../components/WorkExperience";
+import Education from "../components/Education";
 import styles from "./index.module.css";
 
 export default function Home(): JSX.Element {
@@ -14,6 +16,7 @@ export default function Home(): JSX.Element {
         width: "100%",
         minHeight: "100vh",
         padding: "20px 20px",
+        color: "white",
       }}
     >
       <div
@@ -26,17 +29,29 @@ export default function Home(): JSX.Element {
         <LiveClock />
         <SocialIcons />
       </div>
-      <HomeTypingText />
-      <div className={styles.responsiveGrid}>
-        <div style={{ marginLeft: "auto" }}>
-          <InfoCard />
-        </div>
-        <div>
-          <NameCard />
-        </div>
-      </div>
-      {/* <SkillMarquee /> */}
-      {/* <HomeFooter /> */}
+      <Grid>
+        <Row>
+          <Col lg={8} md={24} xs={24} sm={24}>
+            <InfoCard />
+          </Col>
+          <Col lg={16} md={24} xs={24} sm={24}>
+            <NameCard />
+          </Col>
+        </Row>
+        <Row>
+          <Col lg={16} md={15} xs={24} sm={24}>
+            <SkillScale />
+          </Col>
+          <Col lg={8} md={9} xs={24} sm={24}>
+            <Education />
+          </Col>
+        </Row>
+        <Row>
+          <Col lg={24} md={24} xs={24} sm={24}>
+            <WorkExperience />
+          </Col>
+        </Row>
+      </Grid>
     </main>
   );
 }

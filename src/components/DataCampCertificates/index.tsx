@@ -1,11 +1,11 @@
 import CertificateCard from "../../components/CertificateCard";
-import Heading from "@theme/Heading";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Pagination, Mousewheel } from "swiper/modules";
 import styles from "./datacamp-certificates.module.css";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
+import { Text } from "rsuite";
 
 export default function DataCampCertificates() {
   return (
@@ -14,13 +14,9 @@ export default function DataCampCertificates() {
         padding: "10px 20px",
       }}
     >
-      <Heading
-        as="h2"
-        className="primary-text-color"
-        style={{ marginBottom: 0 }}
-      >
+      <Text size="2rem" weight="bold" className="primary-text-color">
         DataCamp
-      </Heading>
+      </Text>
       <Swiper
         breakpoints={{
           320: {
