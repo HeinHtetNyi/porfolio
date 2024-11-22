@@ -7,11 +7,11 @@
 
     /* Tablet view */
     @media (max-width: 768px) {
-        padding: 2% 1%; /* Reduce padding for tablet */
+        padding: 2% 10px; /* Reduce padding for tablet */
     }
 
     /* Mobile view */
     @media (max-width: 480px) {
-        padding: 2% 1%; /* Same as tablet for mobile */
+        padding: 2% 3px; /* Same as tablet for mobile */
     }
 }
