@@ -7,6 +7,8 @@ import SkillScale from "../components/SkillScale";
 import WorkExperience from "../components/WorkExperience";
 import Education from "../components/Education";
 import styles from "./index.module.css";
+import ResumeDownload from "../components/ResumeDownload";
+import CVLetterDownload from "../components/CVLetterDownload";
 
 export default function Home(): JSX.Element {
   return (
@@ -45,6 +47,8 @@ export default function Home(): JSX.Element {
           </Col>
           <Col lg={8} md={9} xs={24} sm={24}>
             <Education />
+            <ResumeDownload />
+            <CVLetterDownload />
           </Col>
         </Row>
         <Row>
