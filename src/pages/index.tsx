@@ -17,7 +17,7 @@ export default function Home(): JSX.Element {
         backgroundColor: "#222831",
         width: "100%",
         minHeight: "100vh",
-        padding: "20px 20px",
+        padding: "20px 0",
         color: "white",
       }}
     >
@@ -27,6 +27,7 @@ export default function Home(): JSX.Element {
           justifyContent: "space-between",
           alignItems: "center",
           flexWrap: "wrap",
+          padding: "0 20px",
         }}
       >
         <LiveClock />
