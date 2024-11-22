@@ -23,13 +23,14 @@ export default function Home(): JSX.Element {
         style={{
           display: "flex",
           justifyContent: "space-between",
+          alignItems: "center",
           flexWrap: "wrap",
         }}
       >
         <LiveClock />
         <SocialIcons />
       </div>
-      <Grid>
+      <Grid fluid={true} className={styles.responsiveGrid}>
         <Row>
           <Col lg={8} md={24} xs={24} sm={24}>
             <InfoCard />

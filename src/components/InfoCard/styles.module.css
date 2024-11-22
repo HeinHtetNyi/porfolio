@@ -1,19 +1,19 @@
 .container {
     margin: 20px auto;
-    /* margin-top: 20px; */
-    width: 310px;
+    max-width: 350px;
 }
 
 .infoTable {
     border-radius: 20px;
     border: 1px solid snow;
-    /* width: 310px; */
     margin: 0;
+    font-size: 15px;
 }
 
 table td,
 tr {
     border: none !important;
+    width: 100%;
 }
 
 .firstRow {

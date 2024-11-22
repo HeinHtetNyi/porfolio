@@ -1,14 +1,18 @@
 import { Progress } from "rsuite";
 import { Text } from "rsuite";
 import styles from "./styles.module.css";
+import { Grid, Row, Col } from "rsuite";
 
 const skills = [
   { name: "Python", scale: 100 },
   { name: "SQL", scale: 90 },
+  { name: "SQL", scale: 80 },
   { name: "Java", scale: 80 },
   { name: "Typescript", scale: 80 },
   { name: "API", scale: 80 },
+  { name: "Docker", scale: 70 },
   { name: "AWS", scale: 50 },
+  { name: "Big Data", scale: 50 },
 ];
 
 export default function SkillScale() {
@@ -24,10 +28,18 @@ export default function SkillScale() {
       </Text>
       {skills.map((skill) => (
         <div style={{ display: "flex", alignItems: "center" }} key={skill.name}>
-          <Text weight="medium" size="xl" style={{ color: "white" }}>
-            {skill.name}
-          </Text>
-          <Progress.Line percent={skill.scale} status="active" />
+          <Grid fluid={true} style={{ width: "100%" }}>
+            <Row>
+              <Col lg={4} md={4} sm={4} xs={4}>
+                <Text weight="medium" size="lg" style={{ color: "white" }}>
+                  {skill.name}
+                </Text>
+              </Col>
+              <Col lg={20} md={20} sm={20} xs={20}>
+                <Progress.Line percent={skill.scale} status="active" />
+              </Col>
+            </Row>
+          </Grid>
         </div>
       ))}
     </div>

@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import SkillMarquee from "../SkillMarquee";
-import { Table, Text } from "rsuite";
+import { Text } from "rsuite";
 import styles from "./styles.module.css";
 
 export default function InfoCard() {
@@ -21,6 +21,10 @@ export default function InfoCard() {
           <tr>
             <td>Email</td>
             <td>heinhtetnyi.ucsy@gmail.com</td>
+          </tr>
+          <tr>
+            <td>Address</td>
+            <td>Yangon, Myanmar</td>
           </tr>
           <tr>
             <td>Nationality</td>

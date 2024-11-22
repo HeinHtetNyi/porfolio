@@ -29,7 +29,7 @@ function CertificateCard({
         </div>
         <div className="card__footer">
           {link && (
-            <Link className="button button--primary button--block" to={link}>
+            <Link className="button view-button" to={link}>
               View
             </Link>
           )}

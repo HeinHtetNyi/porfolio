@@ -21,7 +21,7 @@ export default function NameCard() {
 
   return (
     <div className={styles.container}>
-      <Grid style={{ maxWidth: "600px" }}>
+      <Grid style={{ width: "100%" }}>
         <Row>
           <Col lg={16} md={12} xs={12} sm={12}>
             <div>
@@ -68,18 +68,19 @@ export default function NameCard() {
           </p>
         ) : (
           <p className={styles.text}>
-            <Highlight query={["Saw Yu Nandar"]}>
-              Her name is Saw Yu Nandar, the love of my life and my greatest
-              blessing. We've been together for over five wonderful years, with
-              countless more to come. She's a perfect blend of fiery passion and
-              irresistible charm, her occasional stubbornness only adding to her
-              unique allure. A master of planning and organization, she amazes
-              me with her brilliance, even if her playful laziness sneaks in now
-              and then. She’s currently studying Japanese to pursue her dreams
-              in Japan, and I couldn’t be prouder of her determination. When
-              she’s by my side, her care and love wrap around me like a warm
-              embrace, making the world feel complete. I can't imagine a life
-              without her—she's my heart, my home, and my forever.
+            <Highlight query={["Saw Yu"]}>
+              <span>
+                Her name is Saw Yu , the love of my life and my greatest
+                blessing. We've been together for over five wonderful years,
+                with countless more to come. She's a perfect blend of fiery
+                passion and irresistible charm, her occasional stubbornness only
+                adding to her unique allure. A master of planning and
+                organization, she amazes me with her brilliance, even if her
+                playful laziness sneaks in now and then. When she’s by my side,
+                her care and love wrap around me like a warm embrace, making the
+                world feel complete. I can't imagine a life without her—she's my
+                heart, my home, and my forever.
+              </span>
             </Highlight>
           </p>
         )}

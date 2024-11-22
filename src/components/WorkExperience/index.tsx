@@ -1,5 +1,6 @@
 import { Steps, Panel, Placeholder, ButtonGroup, Button, Text } from "rsuite";
 import { useState } from "react";
+import RunningRoundIcon from "@rsuite/icons/RunningRound";
 import styles from "./styles.module.css";
 import "./custom-steps.css";
 
@@ -50,6 +51,7 @@ export default function WorkExperience() {
               title={exp.company}
               description={exp.position}
               onClick={() => onClickStep(index)}
+              icon={<RunningRoundIcon style={{ fontSize: 25 }} />}
             />
           ))}
         </Steps>
