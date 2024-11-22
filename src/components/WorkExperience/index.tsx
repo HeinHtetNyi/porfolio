@@ -3,14 +3,19 @@ import { useState } from "react";
 import styles from "./styles.module.css";
 import "./custom-steps.css";
 
+const exps = [
+  { company: "Thate Pan Institute", position: "Python Instructor" },
+  { company: "Juncture", position: "Backend Developer" },
+  { company: "Teacher Su", position: "Backend Developer" },
+  { company: "Brillar", position: "Test Automation Engineer" },
+  { company: "Datumstruct", position: "Software Engineer" },
+  { company: "AYA Pay", position: "Data Engineer" },
+];
+
 export default function WorkExperience() {
   const [step, setStep] = useState(0);
-  const onChange = (nextStep: number) => {
-    setStep(nextStep < 0 ? 0 : nextStep > 5 ? 5 : nextStep);
-  };
 
-  const onNext = () => onChange(step + 1);
-  const onPrevious = () => onChange(step - 1);
+  const onClickStep = (step: number) => setStep(step);
 
   return (
     <div className={styles.container}>
@@ -30,14 +35,6 @@ export default function WorkExperience() {
         >
           Work Experience
         </Text>
-        <ButtonGroup>
-          <Button onClick={onPrevious} disabled={step === 0}>
-            Previous
-          </Button>
-          <Button onClick={onNext} disabled={step === 5}>
-            Next
-          </Button>
-        </ButtonGroup>
       </div>
       <div
         style={{
@@ -47,19 +44,18 @@ export default function WorkExperience() {
         }}
       >
         <Steps current={step} style={{ width: "1500px" }}>
-          <Steps.Item
-            title="Thate Pan Institute"
-            description="Python Instructor"
-          />
-          <Steps.Item title="Juncture" description="Backend Developer" />
-          <Steps.Item title="Teacher Su" description="Backend Developer" />
-          <Steps.Item title="Brillar" description="Test Automation Engineer" />
-          <Steps.Item title="Datumstruct" description="Software Engineer" />
-          <Steps.Item title="AYA Pay" description="Data Engineer" />
+          {exps.map((exp, index) => (
+            <Steps.Item
+              key={index}
+              title={exp.company}
+              description={exp.position}
+              onClick={() => onClickStep(index)}
+            />
+          ))}
         </Steps>
       </div>
       <hr />
-      <Panel header={`Step: ${step + 1}`}>
+      <Panel header={`Job: ${step + 1}`}>
         <Placeholder.Paragraph />
       </Panel>
       <hr />

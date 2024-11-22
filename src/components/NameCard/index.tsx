@@ -44,7 +44,7 @@ export default function NameCard() {
             {currentTab === 1 ? (
               <img className={styles.avatar} src={useBaseUrl("/img/me3.jpg")} />
             ) : (
-              <img className={styles.avatar} src={useBaseUrl("/img/sy4.jpg")} />
+              <img className={styles.avatar} src={useBaseUrl("/img/sy5.jpg")} />
             )}
           </Col>
         </Row>

@@ -15,13 +15,21 @@ export default function Education() {
       <Timeline align="left">
         <Timeline.Item>
           <p>2018-2020</p>
-          <p>University of Computer Studies, Yangon</p>
-          <p>Computer Science</p>
+          <Text weight="bold" className="primary-text-color">
+            University of Computer Studies, Yangon
+          </Text>
+          <Text weight="medium" className="primary-text-color">
+            Computer Science
+          </Text>
         </Timeline.Item>
         <Timeline.Item>
           <p>2023-2024</p>
-          <p>Parami University</p>
-          <p>Data Science</p>
+          <Text weight="bold" className="primary-text-color">
+            Parami University
+          </Text>
+          <Text weight="medium" className="primary-text-color">
+            Data Science
+          </Text>
         </Timeline.Item>
       </Timeline>
     </div>

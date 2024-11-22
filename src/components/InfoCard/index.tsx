@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import SkillMarquee from "../SkillMarquee";
-import { Table } from "rsuite";
+import { Table, Text } from "rsuite";
 import styles from "./styles.module.css";
 
 export default function InfoCard() {
@@ -28,11 +28,19 @@ export default function InfoCard() {
           </tr>
           <tr>
             <td>Work at</td>
-            <td>AYA Bank</td>
+            <td>
+              <Text weight="bold" className="primary-text-color">
+                AYA Bank
+              </Text>
+            </td>
           </tr>
           <tr>
             <td>Position</td>
-            <td>Data Engineer</td>
+            <td>
+              <Text weight="bold" className="primary-text-color">
+                Data Engineer
+              </Text>
+            </td>
           </tr>
           <tr>
             <td>Language</td>

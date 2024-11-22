@@ -1,11 +1,14 @@
 import CertificateCard from "../../components/CertificateCard";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Pagination, Mousewheel } from "swiper/modules";
 import styles from "./datacamp-certificates.module.css";
-import "swiper/css";
-import "swiper/css/free-mode";
-import "swiper/css/pagination";
 import { Text } from "rsuite";
+
+const certificates = [
+  {
+    title: "Data Engineer Associate",
+    url: "certificates/de_associate.png",
+    link: "https://www.datacamp.com/certificate/DEA0018324454440",
+  },
+];
 
 export default function DataCampCertificates() {
   return (
@@ -17,41 +20,24 @@ export default function DataCampCertificates() {
       <Text size="2rem" weight="bold" className="primary-text-color">
         DataCamp
       </Text>
-      <Swiper
-        breakpoints={{
-          320: {
-            slidesPerView: 1, // 1 slide on very small screens
-          },
-          640: {
-            slidesPerView: 2, // 2 slides on small screens
-          },
-          768: {
-            slidesPerView: 3, // 3 slides on tablets
-          },
-          1024: {
-            slidesPerView: 4, // 4 slides on medium screens
-          },
-          1280: {
-            slidesPerView: 5, // 5 slides on large screens
-          },
+      <div
+        style={{
+          width: "100%",
+          display: "flex",
+          gap: 30,
+          overflowX: "scroll",
+          scrollbarWidth: "none",
         }}
-        spaceBetween={1}
-        freeMode={true}
-        pagination={{
-          clickable: true,
-        }}
-        mousewheel={true}
-        modules={[FreeMode, Pagination, Mousewheel]}
-        className={styles.swiper}
       >
-        <SwiperSlide className={styles.swiperSlide}>
+        {certificates.map((certificate, index) => (
           <CertificateCard
-            imageUrl={"certificates/de_associate.png"}
-            title="Data Engineer Associate"
-            link="https://www.datacamp.com/certificate/DEA0018324454440"
+            key={index}
+            imageUrl={certificate.url}
+            title={certificate.title}
+            link={certificate.link}
           />
-        </SwiperSlide>
-      </Swiper>
+        ))}
+      </div>
     </div>
   );
 }

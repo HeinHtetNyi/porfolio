@@ -1,6 +1,7 @@
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import Link from "@docusaurus/Link";
 import { Text } from "rsuite";
+import "./styles.css";
 
 function CertificateCard({
   imageUrl,
@@ -12,8 +13,8 @@ function CertificateCard({
   link?: string;
 }) {
   return (
-    <div className="card-demo" style={{ width: "250px", margin: "10px 0" }}>
-      <div className="card" style={{ border: "1px solid snow" }}>
+    <div className="card-demo">
+      <div className="card">
         <div className="card__image">
           <img
             src={useBaseUrl(imageUrl)}
