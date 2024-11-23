@@ -51,38 +51,30 @@ export default function NameCard() {
       </Grid>
       <div className={styles.textBox}>
         {currentTab === 1 ? (
-          <p className={styles.text}>
-            <Highlight query={["Hein Zak"]}>
-              My name is Hein Zak, and I am driven by a passion for data and a
-              commitment to lifelong learning. I am currently working as a data
-              engineer, focusing on the critical aspects of data management,
-              transformation, and analysis. While I’m deeply involved in the
-              data engineering field, my ultimate goal is to become a data
-              scientist and data expert. In preparation for my future studies in
-              Taiwan, I am actively learning traditional Chinese and English.
-              Outside of my professional pursuits, I enjoy playing basketball,
-              which keeps me active and grounded. I am excited to bring my
-              enthusiasm for data and dedication to learning into every
-              opportunity that comes my way.
-            </Highlight>
-          </p>
+          <Highlight query={["Hein Zak"]} className={styles.text}>
+            My name is Hein Zak, and I am driven by a passion for data and a
+            commitment to lifelong learning. I am currently working as a data
+            engineer, focusing on the critical aspects of data management,
+            transformation, and analysis. While I’m deeply involved in the data
+            engineering field, my ultimate goal is to become a data scientist
+            and data expert. In preparation for my future studies in Taiwan, I
+            am actively learning traditional Chinese and English. Outside of my
+            professional pursuits, I enjoy playing basketball, which keeps me
+            active and grounded. I am excited to bring my enthusiasm for data
+            and dedication to learning into every opportunity that comes my way.
+          </Highlight>
         ) : (
-          <p className={styles.text}>
-            <Highlight query={["Saw Yu"]}>
-              <span>
-                Her name is Saw Yu , the love of my life and my greatest
-                blessing. We've been together for over five wonderful years,
-                with countless more to come. She's a perfect blend of fiery
-                passion and irresistible charm, her occasional stubbornness only
-                adding to her unique allure. A master of planning and
-                organization, she amazes me with her brilliance, even if her
-                playful laziness sneaks in now and then. When she’s by my side,
-                her care and love wrap around me like a warm embrace, making the
-                world feel complete. I can't imagine a life without her—she's my
-                heart, my home, and my forever.
-              </span>
-            </Highlight>
-          </p>
+          <Highlight query={["Saw Yu"]} className={styles.text}>
+            Her name is Saw Yu , the love of my life and my greatest blessing.
+            We've been together for over five wonderful years, with countless
+            more to come. She's a perfect blend of fiery passion and
+            irresistible charm, her occasional stubbornness only adding to her
+            unique allure. A master of planning and organization, she amazes me
+            with her brilliance, even if her playful laziness sneaks in now and
+            then. When she’s by my side, her care and love wrap around me like a
+            warm embrace, making the world feel complete. I can't imagine a life
+            without her—she's my heart, my home, and my forever.
+          </Highlight>
         )}
       </div>
     </div>

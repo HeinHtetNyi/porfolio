@@ -21,18 +21,7 @@ export default function Home(): JSX.Element {
         color: "white",
       }}
     >
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          flexWrap: "wrap",
-          padding: "0 20px",
-        }}
-      >
-        <LiveClock />
-        <SocialIcons />
-      </div>
+      <SocialIcons />
       <Grid fluid={true} className={styles.responsiveGrid}>
         <Row>
           <Col lg={8} md={24} xs={24} sm={24}>
