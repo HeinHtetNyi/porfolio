@@ -32,18 +32,17 @@ export default function SkillScale() {
             style={{
               display: "flex",
               alignItems: "center",
-              minWidth: "600px",
             }}
             key={skill.name}
           >
             <Grid fluid={true} style={{ width: "100%" }}>
               <Row>
-                <Col lg={4} md={4} sm={4} xs={4}>
+                <Col lg={5} md={24} sm={24} xs={24}>
                   <Text weight="medium" size="lg" style={{ color: "white" }}>
                     {skill.name}
                   </Text>
                 </Col>
-                <Col lg={20} md={20} sm={20} xs={20}>
+                <Col lg={19} md={24} sm={24} xs={24}>
                   <Progress.Line percent={skill.scale} status="active" />
                 </Col>
               </Row>
