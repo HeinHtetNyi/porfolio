@@ -29,6 +29,9 @@
     border: 1px solid white;
     border-radius: 20px;
     padding: 20px;
+    max-height: 550px;
+    overflow-y: scroll;
+    scrollbar-width: none;
 }
 
 .text {
@@ -38,4 +41,5 @@
     font-variation-settings: "wdth" 100;
     margin-bottom: 0;
     font-size: 19px;
+    text-align: justify;
 }

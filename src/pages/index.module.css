@@ -3,15 +3,19 @@
  * and scoped locally.
  */
 .responsiveGrid {
-    padding: 2% 10%; /* Default padding for desktop */
+    padding: 2% 10%;
+}
 
-    /* Tablet view */
-    @media (max-width: 768px) {
-        padding: 2% 10px; /* Reduce padding for tablet */
+/* Tablet view */
+@media (max-width: 768px) {
+    .responsiveGrid {
+        padding: 2% 20px;
     }
+}
 
-    /* Mobile view */
-    @media (max-width: 480px) {
-        padding: 2% 1px; /* Same as tablet for mobile */
+/* Mobile view */
+@media (max-width: 480px) {
+    .responsiveGrid {
+        padding: 2% 10px;
     }
 }

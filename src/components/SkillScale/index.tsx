@@ -6,9 +6,9 @@ import { Grid, Row, Col } from "rsuite";
 const skills = [
   { name: "Python", scale: 100 },
   { name: "SQL", scale: 90 },
-  { name: "SQL", scale: 80 },
+  { name: "NoSQL", scale: 80 },
   { name: "Java", scale: 80 },
-  { name: "Typescript", scale: 80 },
+  { name: "TypeScript", scale: 80 },
   { name: "API", scale: 80 },
   { name: "Docker", scale: 70 },
   { name: "AWS", scale: 50 },
@@ -26,22 +26,31 @@ export default function SkillScale() {
       >
         Skill
       </Text>
-      {skills.map((skill) => (
-        <div style={{ display: "flex", alignItems: "center" }} key={skill.name}>
-          <Grid fluid={true} style={{ width: "100%" }}>
-            <Row>
-              <Col lg={4} md={4} sm={4} xs={4}>
-                <Text weight="medium" size="lg" style={{ color: "white" }}>
-                  {skill.name}
-                </Text>
-              </Col>
-              <Col lg={20} md={20} sm={20} xs={20}>
-                <Progress.Line percent={skill.scale} status="active" />
-              </Col>
-            </Row>
-          </Grid>
-        </div>
-      ))}
+      <div style={{ overflowX: "scroll", scrollbarWidth: "none" }}>
+        {skills.map((skill) => (
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              minWidth: "600px",
+            }}
+            key={skill.name}
+          >
+            <Grid fluid={true} style={{ width: "100%" }}>
+              <Row>
+                <Col lg={4} md={4} sm={4} xs={4}>
+                  <Text weight="medium" size="lg" style={{ color: "white" }}>
+                    {skill.name}
+                  </Text>
+                </Col>
+                <Col lg={20} md={20} sm={20} xs={20}>
+                  <Progress.Line percent={skill.scale} status="active" />
+                </Col>
+              </Row>
+            </Grid>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
