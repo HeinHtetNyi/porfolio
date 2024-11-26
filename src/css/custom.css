@@ -65,3 +65,20 @@ div {
 .navbar-sidebar {
     z-index: 999;
 }
+
+.rs-nav {
+    position: sticky;
+    top: 60px;
+    z-index: 99;
+    background-color: #222831;
+    padding-top: 30px;
+}
+
+.rs-nav-item {
+    color: white !important;
+}
+
+.rs-nav-item.rs-nav-item-active {
+    background-color: transparent !important;
+    color: #5b99c2;
+}

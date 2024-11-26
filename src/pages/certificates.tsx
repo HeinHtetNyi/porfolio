@@ -3,6 +3,7 @@ import AWSCertificates from "../components/AWSCertificates";
 import DataCampCertificates from "../components/DataCampCertificates";
 import HackerRankCertificates from "../components/HackerRankCertificates";
 import MyLayout from "./MyLayout";
+import "./certificates.css";
 
 export default function Certificates() {
   return (

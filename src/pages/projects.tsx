@@ -1,7 +1,7 @@
 import { Tabs } from "rsuite";
 import MyLayout from "./MyLayout";
-import "./projects.css";
 import ProjectCard from "../components/ProjectCard";
+import "./projects.css";
 
 export default function Projects() {
   return (
