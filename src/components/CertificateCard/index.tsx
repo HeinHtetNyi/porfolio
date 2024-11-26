@@ -8,8 +8,8 @@ function CertificateCard({
   title,
   link,
 }: {
-  imageUrl: string;
-  title: string;
+  imageUrl?: string;
+  title?: string;
   link?: string;
 }) {
   return (
@@ -17,14 +17,14 @@ function CertificateCard({
       <div className="card">
         <div className="card__image">
           <img
-            src={useBaseUrl(imageUrl)}
+            src={useBaseUrl(imageUrl || "/img/comming_soon.png")}
             alt="Image alt text"
             title="Logo Title Text 1"
           />
         </div>
         <div className="card__body">
           <Text size={"xl"} weight="medium" className="primary-text-color">
-            {title || "I don't know"}
+            {title || "Comming Soon"}
           </Text>
         </div>
         <div className="card__footer">

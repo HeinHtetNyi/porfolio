@@ -12,30 +12,14 @@ const certificates = [
 
 export default function AWSCertificates() {
   return (
-    <div
-      style={{
-        padding: "10px 20px",
-      }}
-    >
-      <Text size="2rem" weight="bold" className="primary-text-color">
-        Amazon Web Service
-      </Text>
-      <div
-        style={{
-          display: "flex",
-          gap: 30,
-          overflowX: "scroll",
-          scrollbarWidth: "none",
-        }}
-      >
-        {certificates.map((certificate, index) => (
-          <CertificateCard
-            key={index}
-            imageUrl={certificate.url}
-            title={certificate.title}
-          />
-        ))}
-      </div>
+    <div className={styles.container}>
+      {certificates.map((certificate, index) => (
+        <CertificateCard
+          key={index}
+          imageUrl={certificate.url}
+          title={certificate.title}
+        />
+      ))}
     </div>
   );
 }

@@ -1,0 +1,17 @@
+.card {
+    border: 1px solid snow;
+    width: 250px;
+}
+
+.view-button {
+    border: 1px solid snow;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    width: 100%;
+}
+
+.view-button:hover {
+    border-color: #5b99c2;
+    color: #5b99c2;
+}

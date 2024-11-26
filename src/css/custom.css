@@ -61,3 +61,7 @@ p,
 div {
     color: white;
 }
+
+.navbar-sidebar {
+    z-index: 999;
+}

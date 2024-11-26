@@ -10,8 +10,8 @@ const skills = [
   { name: "Java", scale: 80 },
   { name: "TypeScript", scale: 80 },
   { name: "API", scale: 80 },
-  { name: "Docker", scale: 70 },
-  { name: "AWS", scale: 50 },
+  { name: "Docker", scale: 75 },
+  { name: "AWS", scale: 70 },
   { name: "Big Data", scale: 50 },
 ];
 

@@ -12,32 +12,15 @@ const certificates = [
 
 export default function DataCampCertificates() {
   return (
-    <div
-      style={{
-        padding: "10px 20px",
-      }}
-    >
-      <Text size="2rem" weight="bold" className="primary-text-color">
-        DataCamp
-      </Text>
-      <div
-        style={{
-          width: "100%",
-          display: "flex",
-          gap: 30,
-          overflowX: "scroll",
-          scrollbarWidth: "none",
-        }}
-      >
-        {certificates.map((certificate, index) => (
-          <CertificateCard
-            key={index}
-            imageUrl={certificate.url}
-            title={certificate.title}
-            link={certificate.link}
-          />
-        ))}
-      </div>
+    <div className={styles.container}>
+      {certificates.map((certificate, index) => (
+        <CertificateCard
+          key={index}
+          imageUrl={certificate.url}
+          title={certificate.title}
+          link={certificate.link}
+        />
+      ))}
     </div>
   );
 }

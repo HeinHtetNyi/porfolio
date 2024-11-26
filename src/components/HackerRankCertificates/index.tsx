@@ -1,6 +1,5 @@
 import CertificateCard from "../../components/CertificateCard";
 import styles from "./hackerrank-certificates.module.css";
-import { Text } from "rsuite";
 
 const certificates = [
   {
@@ -27,32 +26,15 @@ const certificates = [
 
 export default function HackerRankCertificates() {
   return (
-    <div
-      style={{
-        padding: "10px 20px",
-      }}
-    >
-      <Text size="2rem" weight="bold" className="primary-text-color">
-        HackerRank
-      </Text>
-      <div
-        style={{
-          width: "100%",
-          display: "flex",
-          gap: 30,
-          overflowX: "scroll",
-          scrollbarWidth: "none",
-        }}
-      >
-        {certificates.map((certificate, index) => (
-          <CertificateCard
-            key={index}
-            imageUrl={certificate.url}
-            title={certificate.title}
-            link={certificate.link}
-          />
-        ))}
-      </div>
+    <div className={styles.container}>
+      {certificates.map((certificate, index) => (
+        <CertificateCard
+          key={index}
+          imageUrl={certificate.url}
+          title={certificate.title}
+          link={certificate.link}
+        />
+      ))}
     </div>
   );
 }

@@ -86,6 +86,7 @@ const config: Config = {
         //   label: "Tutorial",
         // },
         { to: "/certificates", label: "Certificates", position: "left" },
+        { to: "/projects", label: "Projects", position: "left" },
         { to: "/blog", label: "Blog", position: "left" },
         {
           href: "https://github.com/HeinHtetNyi/porfolio",
@@ -96,7 +97,7 @@ const config: Config = {
     },
     footer: {
       style: "dark",
-      copyright: `Data is Protein. I eat data instead of snacks!`,
+      copyright: `This website is coded with Docusaurus and React.`,
     },
     // prism: {
     //   theme: prismThemes.github,

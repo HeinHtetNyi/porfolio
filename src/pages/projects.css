@@ -1,0 +1,23 @@
+.rs-nav {
+    position: sticky;
+    top: 60px;
+    z-index: 99;
+    background-color: #222831;
+    padding-top: 30px;
+}
+
+.rs-nav-item {
+    color: white;
+}
+
+.rs-nav-item.rs-nav-item-active {
+    background-color: transparent !important;
+    color: #5b99c2;
+}
+
+.tab-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
+    gap: 30px;
+    justify-content: center;
+}

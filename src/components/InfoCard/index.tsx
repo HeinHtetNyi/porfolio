@@ -3,6 +3,7 @@ import Link from "@docusaurus/Link";
 import SkillMarquee from "../SkillMarquee";
 import { Text } from "rsuite";
 import styles from "./styles.module.css";
+import useBaseUrl from "@docusaurus/useBaseUrl";
 
 export default function InfoCard() {
   return (
@@ -61,7 +62,12 @@ export default function InfoCard() {
                 className={clsx("button button--lg", styles.learnMeButton)}
                 to="/certificates"
               >
-                Learn me!
+                <span>Learn me</span>
+                <img
+                  src={useBaseUrl("/home/leaf.png")}
+                  width={25}
+                  style={{ cursor: "pointer" }}
+                />
               </Link>
             </td>
           </tr>
