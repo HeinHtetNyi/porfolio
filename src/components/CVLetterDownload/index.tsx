@@ -4,7 +4,7 @@ import styles from "./styles.module.css";
 export default function CVLetterDownload() {
   const onButtonClick = () => {
     // using Java Script method to get PDF file
-    fetch("/pdf/cover_letter.txt").then((response) => {
+    fetch("/pdf/Hein Htet Nyi - CV.pdf").then((response) => {
       response.blob().then((blob) => {
         // Creating new object of PDF file
         const fileURL = window.URL.createObjectURL(blob);
@@ -21,7 +21,7 @@ export default function CVLetterDownload() {
   return (
     <div>
       <button className={styles.downloadButton} onClick={onButtonClick}>
-        Download Cover Letter
+        Download CV
         <img
           src={useBaseUrl("/home/cover-letter.png")}
           width={40}
